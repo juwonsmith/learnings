@@ -1,3 +1,3 @@
 # learnings
 
-A front end mentor challenge solutiondone with HTML and CSS only.
+A front end mentor challenge solution done with HTML and CSS only.
