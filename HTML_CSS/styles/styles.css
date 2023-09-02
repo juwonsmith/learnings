@@ -1,0 +1,212 @@
+:root {
+  box-sizing: border-box;
+
+  --primary-red: hsl(0, 100%, 67%);
+  --primary-orange: hsl(39, 100%, 56%, 15%);
+  --primary-greenteal: hsl(166, 100%, 37%, 10%);
+  --primary-cobaltblue: hsl(234, 85%, 45%, 10%);
+
+  /* neutrals */
+  --neutral-white: hsl(0, 0%, 100%);
+  --neutral-blue: hsl(221, 100%, 96%);
+  --neutral-lavendar: hsl(241, 100%, 89%);
+  --neutral-darkgrayblue: hsl(224, 30%, 27%);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font-family: "Hanken Grotesk", sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.result_display {
+  background-color: var(--primary-cobaltblue);
+  height: 18em;
+  border-radius: 0% 0% 13% 16% / 25% 25% 14% 13%;
+  background-image: linear-gradient(
+    to bottom,
+    hsl(252, 100%, 67%),
+    hsl(241, 81%, 54%)
+  );
+  text-align: center;
+}
+
+.result_display p {
+  color: var(--neutral-lavendar);
+}
+
+.result_display .circle_score {
+  background-color: var(--neutral-darkgrayblue);
+  background-image: linear-gradient(
+    to bottom,
+    hsl(252, 100%, 67%),
+    hsl(241, 81%, 54%)
+  );
+  width: 8em;
+  height: 8em;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.result_display .circle_score p {
+  font-size: 2.8em;
+  color: var(--neutral-white);
+  margin: 0;
+}
+
+.result_display .circle_score span {
+  font-size: 0.9em;
+  color: var(--neutral-lavendar);
+}
+.result_display span {
+  color: var(--neutral-white);
+  font-size: 1.4em;
+}
+.result_display span + p {
+  width: 18em;
+  height: 3em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.3em;
+  word-spacing: 0.2em;
+}
+.breakdown {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.breakdown p {
+  color: var(--neutral-darkgrayblue);
+  font-weight: 600;
+}
+.breakdown .looped {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 20em;
+  height: 2em;
+  border-radius: 0.5em;
+  padding: 0.5em;
+  margin-bottom: 1em;
+}
+.breakdown .react {
+  --primary-red: hsl(0, 100%, 67%, 8%);
+  background-color: var(--primary-red);
+}
+
+.breakdown .react span {
+  color: red;
+}
+.arrange {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8em;
+}
+.breakdown .looped .score1 {
+  color: black;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+.breakdown .looped .score2 {
+  font-size: 1.1em;
+  color: var(--neutral-darkgrayblue);
+}
+
+button {
+  width: 20em;
+  height: 3em;
+  padding: 0.8em;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 1.5em;
+  font-size: 1.1em;
+  color: var(--neutral-white);
+  background-color: var(--neutral-darkgrayblue);
+}
+button:hover {
+  background-color: hsl(241, 81%, 54%);
+  cursor: pointer;
+}
+
+.breakdown .mem {
+  background-color: var(--primary-orange);
+}
+.breakdown .mem span {
+  color: hsl(39, 100%, 56%);
+}
+.breakdown .vis {
+  background-color: var(--primary-cobaltblue);
+}
+.breakdown .vis span {
+  color: hsl(234, 85%, 45%);
+}
+.breakdown .verb {
+  background-color: var(--primary-greenteal);
+}
+.breakdown .verb span {
+  color: hsl(166, 100%, 37%);
+}
+
+@media screen and (min-width: 900px) {
+  .wrapper {
+    flex-direction: row;
+  }
+  .result_display {
+    height: 100vh;
+    width: 50%;
+    border-radius: 1em;
+  }
+  .result_display p {
+    font-size: 1.6em;
+  }
+
+  .result_display .circle_score {
+    width: 14em;
+    height: 14em;
+    margin-bottom: 3em;
+  }
+  .result_display .circle_score p {
+    font-size: 3em;
+  }
+  .result_display span {
+    font-size: 1.8em;
+  }
+  .result_display span + p {
+    width: 14em;
+  }
+  .breakdown {
+    margin: 0;
+    width: 50%;
+    padding-left: 2em;
+  }
+  .breakdown p {
+    font-weight: 800;
+    font-size: 1.5em;
+  }
+  .breakdown .looped {
+    width: calc(100% - 5em);
+    height: 3em;
+    border-radius: 0.5em;
+    padding: 0.8em;
+    margin-bottom: 1.5em;
+  }
+  button{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-top: 3em;
+    height: 3.5em;
+  }
+}
